@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Servicios Contables y Financieros | Jason Masis CPI</title>
+    <title>Soluciones Financieras MM | Jason Masis CPI</title>
 
-    <meta name="description" content="Servicios contables, tributarios y financieros para emprendedores, PYMES y empresas en Costa Rica.">
+    <meta
+        name="description"
+        content="Servicios contables, tributarios y financieros para emprendedores, PYMES y empresas en Costa Rica."
+    >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
 
     <style>
 
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
         :root {
+
             --navy: #1E3A5F;
             --greige: #CFC8BE;
             --white: #FFFFFF;
             --light: #E5E7EB;
             --charcoal: #374151;
+
             --dark: #17263A;
             --soft: #F7F7F6;
+
+            --whatsapp: #25D366;
+
         }
+
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
 
         * {
             margin: 0;
@@ -31,980 +59,2252 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
+
             font-family: "DM Sans", sans-serif;
+
             color: var(--charcoal);
+
             background: var(--white);
+
             line-height: 1.6;
+
+            overflow-x: hidden;
+
         }
+
 
         a {
+
             text-decoration: none;
+
             color: inherit;
+
         }
+
 
         img {
+
             max-width: 100%;
+
             display: block;
+
         }
+
+
+        button,
+        input,
+        select,
+        textarea {
+
+            font-family: inherit;
+
+        }
+
 
         .container {
+
             width: min(1150px, 92%);
+
             margin: auto;
+
         }
 
-        /* =========================
+
+        /* =====================================================
            HEADER
-        ========================= */
+        ===================================================== */
 
         header {
+
             position: fixed;
+
             top: 0;
+
             left: 0;
+
             width: 100%;
+
             z-index: 1000;
+
             background: rgba(255,255,255,.96);
-            backdrop-filter: blur(10px);
+
+            backdrop-filter: blur(12px);
+
             border-bottom: 1px solid rgba(30,58,95,.08);
+
         }
+
 
         .nav {
+
             min-height: 78px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
         }
+
 
         .logo {
+
             display: flex;
+
             align-items: center;
+
         }
+
 
         .logo img {
-            width: 145px;
-            max-height: 58px;
+
+            width: 165px;
+
+            max-height: 64px;
+
             object-fit: contain;
+
+            transition: transform .25s ease;
+
         }
+
+
+        .logo img:hover {
+
+            transform: scale(1.03);
+
+        }
+
 
         .nav-links {
+
             display: flex;
+
             align-items: center;
+
             gap: 30px;
+
         }
+
 
         .nav-links a {
+
             font-size: 14px;
+
             font-weight: 600;
+
             color: var(--charcoal);
+
             transition: .25s ease;
+
         }
+
 
         .nav-links a:hover {
+
             color: var(--navy);
+
         }
+
 
         .nav-contact {
+
             background: var(--navy);
+
             color: white !important;
+
             padding: 11px 19px;
+
             border-radius: 8px;
+
         }
+
 
         .nav-contact:hover {
+
             background: #142c49 !important;
+
+            transform: translateY(-2px);
+
         }
+
 
         .menu-btn {
+
             display: none;
+
             border: none;
+
             background: none;
+
             font-size: 28px;
+
             color: var(--navy);
+
             cursor: pointer;
+
         }
 
-        /* =========================
+
+        /* =====================================================
            HERO
-        ========================= */
+        ===================================================== */
 
         .hero {
+
             min-height: 100vh;
+
             padding-top: 78px;
+
             position: relative;
+
             display: flex;
+
             align-items: center;
+
             overflow: hidden;
 
             background:
+
                 linear-gradient(
+
                     90deg,
+
                     rgba(15,35,57,.96) 0%,
+
                     rgba(30,58,95,.90) 48%,
+
                     rgba(30,58,95,.55) 100%
+
                 ),
+
                 url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=85");
 
             background-size: cover;
+
             background-position: center;
+
         }
+
 
         .hero-content {
+
             max-width: 720px;
+
             color: white;
+
             padding: 90px 0;
+
+            animation: heroAppear .8s ease both;
+
         }
+
+
+        @keyframes heroAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(25px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
 
         .eyebrow {
+
             display: inline-flex;
+
             align-items: center;
+
             gap: 8px;
+
             padding: 7px 13px;
+
             border: 1px solid rgba(255,255,255,.25);
+
             background: rgba(255,255,255,.08);
+
             border-radius: 50px;
+
             font-size: 13px;
+
             font-weight: 600;
+
             margin-bottom: 22px;
+
         }
+
 
         .hero h1 {
+
             font-family: "Playfair Display", serif;
+
             font-size: clamp(42px, 6vw, 70px);
+
             line-height: 1.05;
+
             margin-bottom: 24px;
+
         }
+
 
         .hero h1 span {
+
             color: var(--greige);
+
         }
+
 
         .hero p {
+
             font-size: 18px;
+
             max-width: 650px;
+
             color: rgba(255,255,255,.88);
+
             margin-bottom: 34px;
+
         }
+
 
         .hero-buttons {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 13px;
+
         }
+
 
         .btn {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
+
             padding: 14px 22px;
+
             border-radius: 9px;
+
             font-weight: 700;
-            transition: .25s ease;
+
+            transition:
+
+                transform .25s ease,
+
+                box-shadow .25s ease,
+
+                background .25s ease;
+
         }
+
 
         .btn-primary {
+
             background: white;
+
             color: var(--navy);
+
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-        }
 
         .btn-outline {
+
             border: 1px solid rgba(255,255,255,.45);
+
             color: white;
+
             background: rgba(255,255,255,.06);
+
         }
+
+
+        .btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 10px 25px rgba(0,0,0,.14);
+
+        }
+
 
         .btn-outline:hover {
+
             background: rgba(255,255,255,.13);
+
         }
 
-        /* =========================
+
+        /* =====================================================
            STATS
-        ========================= */
+        ===================================================== */
 
         .stats {
+
             margin-top: -55px;
+
             position: relative;
+
             z-index: 5;
+
         }
+
 
         .stats-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns: repeat(3,1fr);
+
             background: white;
+
             border-radius: 18px;
+
             box-shadow: 0 18px 50px rgba(30,58,95,.12);
+
             overflow: hidden;
+
         }
+
 
         .stat {
+
             padding: 27px;
+
             text-align: center;
+
             border-right: 1px solid var(--light);
+
+            transition: .3s ease;
+
         }
+
 
         .stat:last-child {
+
             border-right: none;
+
         }
+
+
+        .stat:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 12px 30px rgba(30,58,95,.10);
+
+        }
+
 
         .stat strong {
+
             display: block;
+
             font-family: "Playfair Display", serif;
+
             color: var(--navy);
+
             font-size: 30px;
+
         }
+
 
         .stat span {
+
             font-size: 14px;
+
             color: #6b7280;
+
         }
 
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
 
         section {
+
             padding: 100px 0;
+
         }
+
 
         .section-heading {
+
             max-width: 720px;
+
             margin-bottom: 50px;
+
         }
+
 
         .section-label {
+
             color: var(--navy);
+
             font-weight: 700;
+
             font-size: 13px;
+
             letter-spacing: 1.5px;
+
             text-transform: uppercase;
+
             margin-bottom: 10px;
+
         }
+
 
         .section-heading h2 {
+
             font-family: "Playfair Display", serif;
+
             color: var(--navy);
-            font-size: clamp(34px, 4vw, 48px);
+
+            font-size: clamp(34px,4vw,48px);
+
             line-height: 1.15;
+
             margin-bottom: 15px;
+
         }
+
 
         .section-heading p {
+
             color: #6b7280;
+
             font-size: 17px;
+
         }
 
-        /* =========================
+
+        /* =====================================================
+           INTERACTIVE CARDS
+        ===================================================== */
+
+        .service-group,
+        .value-card,
+        .segment-card,
+        .price-item,
+        .commitment-box,
+        .contact-info div {
+
+            transition:
+
+                transform .3s ease,
+
+                box-shadow .3s ease,
+
+                border-color .3s ease;
+
+        }
+
+
+        .service-group:hover,
+        .value-card:hover,
+        .segment-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: 0 20px 45px rgba(30,58,95,.14);
+
+        }
+
+
+        /* =====================================================
            SERVICES
-        ========================= */
+        ===================================================== */
 
         .services {
+
             background: var(--soft);
+
         }
+
 
         .service-groups {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns: repeat(3,1fr);
+
             gap: 24px;
+
         }
+
 
         .service-group {
+
             background: white;
+
             border: 1px solid var(--light);
+
             border-radius: 20px;
-            padding: 32px;
+
+            padding: 35px 32px;
+
             position: relative;
+
             overflow: hidden;
-            transition: .3s ease;
+
+            text-align: center;
+
         }
 
-        .service-group:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 18px 40px rgba(30,58,95,.10);
-        }
 
         .service-group::before {
+
             content: "";
+
             position: absolute;
+
             left: 0;
+
             top: 0;
+
             width: 100%;
+
             height: 5px;
+
             background: var(--navy);
+
         }
+
 
         .service-icon {
-            width: 54px;
-            height: 54px;
+
+            width: 58px;
+
+            height: 58px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
-            border-radius: 14px;
+
+            border-radius: 15px;
+
             background: #eef2f6;
+
             color: var(--navy);
-            font-size: 25px;
-            margin-bottom: 22px;
+
+            font-size: 27px;
+
+            margin: 0 auto 22px;
+
+            transition:
+
+                transform .3s ease,
+
+                box-shadow .3s ease;
+
         }
+
+
+        .service-group:hover .service-icon {
+
+            transform: translateY(-4px) scale(1.05);
+
+            box-shadow: 0 8px 20px rgba(30,58,95,.12);
+
+        }
+
 
         .service-group h3 {
+
             font-family: "Playfair Display", serif;
+
             color: var(--navy);
-            font-size: 27px;
+
+            font-size: 28px;
+
             margin-bottom: 20px;
+
+            transition: .25s ease;
+
         }
+
+
+        .service-group:hover h3 {
+
+            color: #142c49;
+
+            transform: translateY(-2px);
+
+        }
+
 
         .service-group ul {
+
             list-style: none;
+
+            text-align: left;
+
         }
+
 
         .service-group li {
+
             position: relative;
+
             padding: 9px 0 9px 25px;
+
             border-bottom: 1px solid #f0f1f2;
+
             color: var(--charcoal);
+
         }
+
 
         .service-group li:last-child {
+
             border-bottom: none;
+
         }
+
 
         .service-group li::before {
+
             content: "✓";
+
             position: absolute;
+
             left: 0;
+
             color: var(--navy);
+
             font-weight: 700;
+
         }
 
-        /* =========================
-           EXPERIENCE
-        ========================= */
+
+        /* =====================================================
+           EXPERIENCIA
+        ===================================================== */
 
         .experience-grid {
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 65px;
+
             align-items: center;
+
         }
 
+
         .experience-image {
+
             min-height: 520px;
+
             border-radius: 30px;
+
             overflow: hidden;
+
             position: relative;
 
             background:
+
                 linear-gradient(
+
                     rgba(30,58,95,.20),
+
                     rgba(30,58,95,.05)
+
                 ),
+
                 url("https://raw.githubusercontent.com/solucionesfmm-star/images/3fb9b92b35472503b165afd1448a47fce0350d87/exp.jpg");
 
             background-size: cover;
+
             background-position: center;
+
+            box-shadow: 0 20px 50px rgba(30,58,95,.14);
+
+            transition: transform .35s ease, box-shadow .35s ease;
+
         }
+
+
+        .experience-image:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 28px 60px rgba(30,58,95,.20);
+
+        }
+
 
         .experience-badge {
+
             position: absolute;
+
             left: 25px;
+
             bottom: 25px;
-            background: rgba(255,255,255,.95);
+
+            background: rgba(255,255,255,.96);
+
             padding: 22px 25px;
+
             border-radius: 15px;
+
             box-shadow: 0 15px 40px rgba(0,0,0,.15);
+
         }
+
 
         .experience-badge strong {
+
             display: block;
+
             color: var(--navy);
+
             font-family: "Playfair Display", serif;
+
             font-size: 28px;
+
         }
+
 
         .experience-badge span {
+
             color: #6b7280;
+
             font-size: 14px;
+
         }
+
 
         .experience-text h2 {
+
             font-family: "Playfair Display", serif;
+
             font-size: 45px;
+
             line-height: 1.15;
+
             color: var(--navy);
+
             margin-bottom: 20px;
+
         }
+
 
         .experience-text p {
+
             color: #6b7280;
+
             margin-bottom: 20px;
+
         }
+
 
         .experience-list {
+
             list-style: none;
+
             margin-top: 25px;
+
         }
+
 
         .experience-list li {
+
             display: flex;
+
             gap: 12px;
+
             margin-bottom: 13px;
+
             color: var(--charcoal);
+
         }
+
 
         .experience-list span {
+
             color: var(--navy);
+
             font-weight: 700;
+
         }
 
-        /* =========================
-           VALUE
-        ========================= */
+
+        /* =====================================================
+           VALOR
+        ===================================================== */
 
         .value {
+
             background: var(--navy);
+
             color: white;
+
         }
+
 
         .value .section-label {
+
             color: var(--greige);
+
         }
+
 
         .value .section-heading h2 {
+
             color: white;
+
         }
+
 
         .value .section-heading p {
+
             color: rgba(255,255,255,.72);
+
         }
+
 
         .value-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns: repeat(3,1fr);
+
             gap: 20px;
+
         }
+
 
         .value-card {
+
             padding: 30px;
+
             border: 1px solid rgba(255,255,255,.13);
+
             border-radius: 17px;
+
             background: rgba(255,255,255,.05);
+
         }
+
+
+        .value-card:hover {
+
+            background: rgba(255,255,255,.08);
+
+            border-color: rgba(255,255,255,.25);
+
+        }
+
 
         .value-card strong {
+
             display: block;
+
             color: var(--greige);
+
             font-size: 17px;
+
             margin-bottom: 9px;
+
         }
+
 
         .value-card p {
+
             color: rgba(255,255,255,.72);
+
             font-size: 14px;
+
         }
 
-        /* =========================
+
+        /* =====================================================
            SEGMENTOS
-        ========================= */
+        ===================================================== */
 
         .segments {
+
             background: var(--soft);
+
         }
+
 
         .segments-grid {
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns: repeat(2,1fr);
+
             gap: 22px;
+
         }
+
 
         .segment-card {
+
             background: white;
+
             border: 1px solid var(--light);
+
             border-radius: 20px;
+
             padding: 30px;
+
             display: flex;
+
             gap: 20px;
+
             align-items: flex-start;
-            transition: .25s ease;
+
         }
+
 
         .segment-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(30,58,95,.08);
+
+            border-color: rgba(30,58,95,.20);
+
         }
+
 
         .segment-icon {
+
             font-size: 31px;
+
             min-width: 42px;
+
+            text-align: center;
+
+            transition: transform .3s ease;
+
         }
+
+
+        .segment-card:hover .segment-icon {
+
+            transform: scale(1.12) translateY(-2px);
+
+        }
+
 
         .segment-card h3 {
+
             color: var(--navy);
+
             font-size: 21px;
+
             margin-bottom: 7px;
+
         }
+
 
         .segment-card p {
+
             color: #6b7280;
+
             font-size: 15px;
+
         }
 
-        /* =========================
-           COMMITMENT
-        ========================= */
+
+        /* =====================================================
+           COMPROMISO
+        ===================================================== */
 
         .commitment {
+
             background: white;
+
         }
+
 
         .commitment-box {
-            background: var(--soft);
+
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns: 85px 1fr;
+
+            gap: 30px;
+
+            background:
+
+                linear-gradient(
+
+                    135deg,
+
+                    #f7f7f6 0%,
+
+                    #ffffff 100%
+
+                );
+
+            border: 1px solid var(--light);
+
             border-left: 5px solid var(--navy);
-            border-radius: 0 18px 18px 0;
-            padding: 40px;
+
+            border-radius: 0 24px 24px 0;
+
+            padding: 45px;
+
+            box-shadow: 0 18px 45px rgba(30,58,95,.08);
+
+            overflow: hidden;
+
         }
+
+
+        .commitment-box::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+
+            height: 220px;
+
+            right: -100px;
+
+            top: -100px;
+
+            border-radius: 50%;
+
+            background: rgba(30,58,95,.045);
+
+        }
+
+
+        .commitment-icon {
+
+            width: 68px;
+
+            height: 68px;
+
+            border-radius: 18px;
+
+            background: var(--navy);
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+            box-shadow: 0 12px 25px rgba(30,58,95,.20);
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .commitment-content {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
 
         .commitment-box h2 {
+
             font-family: "Playfair Display", serif;
+
             color: var(--navy);
-            font-size: 36px;
+
+            font-size: 38px;
+
             margin-bottom: 15px;
+
         }
+
 
         .commitment-box p {
+
             color: #6b7280;
+
             font-size: 17px;
+
             max-width: 850px;
+
+            margin-bottom: 25px;
+
         }
 
-        /* =========================
+
+        .commitment-points {
+
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .commitment-points div {
+
+            padding: 17px;
+
+            border-radius: 12px;
+
+            background: white;
+
+            border: 1px solid var(--light);
+
+            transition: .25s ease;
+
+        }
+
+
+        .commitment-points div:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 10px 25px rgba(30,58,95,.08);
+
+        }
+
+
+        .commitment-points strong {
+
+            display: block;
+
+            color: var(--navy);
+
+            font-size: 14px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .commitment-points span {
+
+            display: block;
+
+            color: #6b7280;
+
+            font-size: 12px;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* =====================================================
            TARIFAS
-        ========================= */
+        ===================================================== */
 
         .pricing {
+
             background: var(--soft);
+
         }
+
 
         .pricing-intro {
+
             max-width: 750px;
+
             margin-bottom: 35px;
+
             color: #6b7280;
+
         }
+
+
+        .pricing-main {
+
+            background: white;
+
+            border: 1px solid var(--light);
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow: 0 10px 30px rgba(30,58,95,.06);
+
+        }
+
+
+        .pricing-main > summary {
+
+            list-style: none;
+
+            cursor: pointer;
+
+            padding: 24px 28px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            color: var(--navy);
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            transition: .25s ease;
+
+        }
+
+
+        .pricing-main > summary::-webkit-details-marker {
+
+            display: none;
+
+        }
+
+
+        .pricing-main > summary:hover {
+
+            background: #f8f9fa;
+
+        }
+
+
+        .pricing-main-icon {
+
+            width: 35px;
+
+            height: 35px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #eef2f6;
+
+            font-size: 22px;
+
+            transition: .25s ease;
+
+        }
+
+
+        .pricing-main[open] > summary {
+
+            border-bottom: 1px solid var(--light);
+
+        }
+
+
+        .pricing-main[open] .pricing-main-icon {
+
+            transform: rotate(180deg);
+
+        }
+
+
+        .pricing-main .pricing-list {
+
+            padding: 20px;
+
+        }
+
 
         .pricing-list {
+
             display: grid;
+
             gap: 12px;
+
         }
+
 
         .price-item {
+
             background: white;
+
             border: 1px solid var(--light);
+
             border-radius: 13px;
+
             overflow: hidden;
+
         }
+
+
+        .price-item:hover {
+
+            border-color: rgba(30,58,95,.25);
+
+            box-shadow: 0 10px 25px rgba(30,58,95,.08);
+
+        }
+
 
         .price-item summary {
+
             list-style: none;
+
             cursor: pointer;
+
             padding: 20px 24px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             gap: 20px;
+
             color: var(--navy);
+
             font-weight: 700;
+
         }
+
 
         .price-item summary::-webkit-details-marker {
+
             display: none;
+
         }
+
 
         .price-item summary::after {
+
             content: "+";
+
             width: 30px;
+
             height: 30px;
+
             border-radius: 50%;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             background: #eef2f6;
+
             font-size: 20px;
+
             flex-shrink: 0;
+
         }
+
 
         .price-item[open] summary::after {
+
             content: "−";
+
         }
+
 
         .price-details {
+
             border-top: 1px solid var(--light);
+
             padding: 22px 24px;
+
             background: #fafafa;
+
         }
+
 
         .price-grid {
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns: repeat(4,1fr);
+
             gap: 15px;
+
         }
+
 
         .price-data span {
+
             display: block;
+
             font-size: 11px;
+
             color: #6b7280;
+
             text-transform: uppercase;
+
             letter-spacing: .7px;
+
             margin-bottom: 3px;
+
         }
+
 
         .price-data strong {
+
             color: var(--charcoal);
+
         }
+
 
         .price-total strong {
+
             color: var(--navy);
+
             font-size: 19px;
+
         }
+
 
         .pricing-note {
+
             margin-top: 18px;
+
             font-size: 13px;
+
             color: #6b7280;
+
         }
 
-        /* =========================
-           CONTACT
-        ========================= */
+
+        /* =====================================================
+           CONTACTO
+        ===================================================== */
 
         .contact {
+
             background: var(--navy);
+
             color: white;
+
         }
+
 
         .contact-grid {
+
             display: grid;
+
             grid-template-columns: .8fr 1.2fr;
+
             gap: 60px;
+
             align-items: start;
+
         }
+
 
         .contact h2 {
+
             font-family: "Playfair Display", serif;
+
             font-size: 46px;
+
             line-height: 1.1;
+
             margin-bottom: 20px;
+
         }
+
 
         .contact-intro {
+
             color: rgba(255,255,255,.72);
+
             margin-bottom: 30px;
+
         }
+
 
         .contact-info {
+
             display: grid;
+
             gap: 15px;
+
         }
+
 
         .contact-info div {
+
             padding: 17px;
+
             border: 1px solid rgba(255,255,255,.13);
+
             border-radius: 12px;
+
             background: rgba(255,255,255,.05);
+
         }
+
+
+        .contact-info div:hover {
+
+            transform: translateX(5px);
+
+            background: rgba(255,255,255,.09);
+
+        }
+
 
         .contact-info strong {
+
             display: block;
+
             color: var(--greige);
+
             margin-bottom: 3px;
+
         }
+
 
         .contact-form {
+
             background: white;
+
             padding: 35px;
+
             border-radius: 20px;
+
             color: var(--charcoal);
+
+            box-shadow: 0 20px 50px rgba(0,0,0,.12);
+
         }
+
 
         .form-grid {
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 17px;
+
         }
+
 
         .form-group {
+
             margin-bottom: 17px;
+
         }
+
 
         .form-group.full {
+
             grid-column: 1 / -1;
+
         }
 
+
         label {
+
             display: block;
+
             font-size: 13px;
+
             font-weight: 700;
+
             color: var(--navy);
+
             margin-bottom: 7px;
+
         }
+
 
         input,
         select,
         textarea {
+
             width: 100%;
+
             border: 1px solid #d7dbe0;
+
             border-radius: 8px;
+
             padding: 13px 14px;
-            font-family: inherit;
+
             font-size: 14px;
+
             color: var(--charcoal);
+
             outline: none;
+
             background: white;
+
+            transition: .25s ease;
+
         }
+
 
         input:focus,
         select:focus,
         textarea:focus {
+
             border-color: var(--navy);
+
             box-shadow: 0 0 0 3px rgba(30,58,95,.08);
+
         }
+
 
         textarea {
+
             min-height: 125px;
+
             resize: vertical;
+
         }
+
 
         .submit-btn {
+
             width: 100%;
+
             border: none;
+
             background: var(--navy);
+
             color: white;
+
             padding: 15px;
+
             border-radius: 9px;
-            font-family: inherit;
+
             font-weight: 700;
+
             cursor: pointer;
+
             transition: .25s ease;
+
         }
+
 
         .submit-btn:hover {
+
             background: #142c49;
-            transform: translateY(-1px);
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 10px 25px rgba(30,58,95,.25);
+
         }
 
-        /* =========================
+
+        /* =====================================================
            FOOTER
-        ========================= */
+        ===================================================== */
 
         footer {
+
             background: #13263d;
+
             color: rgba(255,255,255,.65);
-            padding: 28px 0;
+
+            padding: 38px 0;
+
             text-align: center;
-            font-size: 13px;
+
         }
 
-        /* =========================
+
+        .footer-brand {
+
+            color: white;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 24px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .footer-rights {
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .footer-creator {
+
+            color: var(--greige);
+
+            font-size: 12px;
+
+            letter-spacing: .4px;
+
+        }
+
+
+        /* =====================================================
            WHATSAPP
-        ========================= */
+        ===================================================== */
 
         .whatsapp {
+
             position: fixed;
+
             right: 22px;
+
             bottom: 22px;
+
             width: 62px;
+
             height: 62px;
+
             border-radius: 50%;
-            background: #25D366;
+
+            background: var(--whatsapp);
+
             color: white;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
-            font-size: 29px;
-            box-shadow: 0 8px 25px rgba(0,0,0,.20);
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.22);
+
             z-index: 999;
-            transition: .25s ease;
+
+            transition: .3s ease;
+
         }
+
+
+        .whatsapp svg {
+
+            width: 32px;
+
+            height: 32px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
 
         .whatsapp:hover {
-            transform: translateY(-4px) scale(1.04);
+
+            transform: translateY(-5px) scale(1.06);
+
+            box-shadow: 0 15px 35px rgba(37,211,102,.30);
+
         }
+
 
         .whatsapp::before {
+
             content: "";
+
             position: absolute;
+
             inset: -5px;
+
             border: 2px solid rgba(37,211,102,.25);
+
             border-radius: 50%;
+
             animation: pulse 2s infinite;
+
         }
+
 
         @keyframes pulse {
+
             0% {
+
                 transform: scale(.95);
+
                 opacity: .8;
+
             }
+
             70% {
+
                 transform: scale(1.15);
+
                 opacity: 0;
+
             }
+
             100% {
+
                 transform: scale(1.15);
+
                 opacity: 0;
+
             }
+
         }
 
-        /* =========================
+
+        /* =====================================================
            RESPONSIVE
-        ========================= */
+        ===================================================== */
 
         @media (max-width: 900px) {
 
             .nav-links {
+
                 display: none;
+
                 position: absolute;
+
                 top: 78px;
+
                 left: 0;
+
                 width: 100%;
+
                 background: white;
+
                 flex-direction: column;
+
                 padding: 25px;
+
                 gap: 20px;
+
                 border-bottom: 1px solid var(--light);
+
             }
+
 
             .nav-links.active {
+
                 display: flex;
+
             }
 
+
             .menu-btn {
+
                 display: block;
+
             }
+
 
             .service-groups,
             .value-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .experience-grid,
             .contact-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .segments-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .experience-image {
+
                 min-height: 420px;
+
             }
 
+
             .price-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns: repeat(2,1fr);
+
             }
+
+
+            .commitment-box {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .commitment-points {
+
+                grid-template-columns: 1fr;
+
+            }
+
         }
+
 
         @media (max-width: 650px) {
 
             section {
+
                 padding: 75px 0;
+
             }
+
+
+            .logo img {
+
+                width: 150px;
+
+            }
+
 
             .hero-content {
+
                 padding: 65px 0;
+
             }
+
 
             .hero h1 {
+
                 font-size: 43px;
+
             }
+
 
             .hero p {
+
                 font-size: 16px;
+
             }
+
 
             .stats {
+
                 margin-top: -30px;
+
             }
+
 
             .stats-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .stat {
+
                 border-right: none;
+
                 border-bottom: 1px solid var(--light);
+
             }
 
+
             .stat:last-child {
+
                 border-bottom: none;
+
             }
+
 
             .experience-text h2,
             .contact h2 {
+
                 font-size: 37px;
+
             }
+
 
             .experience-image {
+
                 min-height: 330px;
+
             }
+
 
             .contact-form {
+
                 padding: 23px;
+
             }
+
 
             .form-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .form-group.full {
+
                 grid-column: auto;
+
             }
+
 
             .price-grid {
+
                 grid-template-columns: 1fr 1fr;
+
             }
 
-            .whatsapp {
-                width: 56px;
-                height: 56px;
-                right: 16px;
-                bottom: 16px;
+
+            .commitment-box {
+
+                padding: 30px 25px;
+
             }
+
+
+            .commitment-box h2 {
+
+                font-size: 32px;
+
+            }
+
+
+            .whatsapp {
+
+                width: 56px;
+
+                height: 56px;
+
+                right: 16px;
+
+                bottom: 16px;
+
+            }
+
+
+            .whatsapp svg {
+
+                width: 29px;
+
+                height: 29px;
+
+            }
+
         }
 
     </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
+
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
     <div class="container nav">
 
+
         <a href="#inicio" class="logo">
+
             <img
                 src="https://raw.githubusercontent.com/solucionesfmm-star/images/170d6f1e16a07a9843cc81e92f25049465a1c1c5/logo.jpeg"
-                alt="Jason Masis Contador Privado Incorporado"
+                alt="Soluciones Financieras MM"
             >
+
         </a>
 
-        <button class="menu-btn" id="menuBtn">☰</button>
 
-        <nav class="nav-links" id="navLinks">
-            <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#enfoque">Enfoque</a>
-            <a href="#tarifas">Tarifas</a>
-            <a href="#contacto" class="nav-contact">Contacto</a>
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Abrir menú"
+        >
+            ☰
+        </button>
+
+
+        <nav
+            class="nav-links"
+            id="navLinks"
+        >
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#servicios">
+                Servicios
+            </a>
+
+            <a href="#experiencia">
+                Experiencia
+            </a>
+
+            <a href="#enfoque">
+                Enfoque
+            </a>
+
+            <a href="#tarifas">
+                Tarifas
+            </a>
+
+            <a
+                href="#contacto"
+                class="nav-contact"
+            >
+                Contacto
+            </a>
+
         </nav>
 
     </div>
@@ -1012,38 +2312,62 @@
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
 
-<section class="hero" id="inicio">
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="inicio"
+>
 
     <div class="container">
 
         <div class="hero-content">
 
+
             <div class="eyebrow">
+
                 ● Contabilidad · Tributación · Finanzas
+
             </div>
 
+
             <h1>
+
                 Información financiera
-                <span>clara para mejores decisiones.</span>
+
+                <span>
+                    clara para mejores decisiones.
+                </span>
+
             </h1>
 
+
             <p>
-                Servicios contables, tributarios y financieros con un enfoque
-                profesional, ordenado y personalizado para emprendedores,
-                PYMES y empresas.
+
+                Servicios contables, tributarios y financieros
+                con un enfoque profesional, ordenado y personalizado
+                para emprendedores, PYMES y empresas.
+
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#contacto" class="btn btn-primary">
+                <a
+                    href="#contacto"
+                    class="btn btn-primary"
+                >
                     Solicitar asesoría
                 </a>
 
-                <a href="#servicios" class="btn btn-outline">
+
+                <a
+                    href="#servicios"
+                    class="btn btn-outline"
+                >
                     Conocer servicios
                 </a>
 
@@ -1056,9 +2380,10 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      STATS
-========================= -->
+===================================================== -->
 
 <div class="stats">
 
@@ -1066,20 +2391,45 @@
 
         <div class="stats-grid">
 
-            <div class="stat">
-                <strong>18+</strong>
-                <span>Años de experiencia profesional</span>
-            </div>
 
             <div class="stat">
-                <strong>CPI</strong>
-                <span>Contador Privado Incorporado</span>
+
+                <strong>
+                    18+
+                </strong>
+
+                <span>
+                    Años de experiencia profesional
+                </span>
+
             </div>
 
+
             <div class="stat">
-                <strong>360°</strong>
-                <span>Visión contable, tributaria y financiera</span>
+
+                <strong>
+                    CPI
+                </strong>
+
+                <span>
+                    Contador Privado Incorporado
+                </span>
+
             </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    360°
+                </strong>
+
+                <span>
+                    Visión contable, tributaria y financiera
+                </span>
+
+            </div>
+
 
         </div>
 
@@ -1088,13 +2438,18 @@
 </div>
 
 
-<!-- =========================
-     SERVICIOS
-========================= -->
 
-<section class="services" id="servicios">
+<!-- =====================================================
+     SERVICIOS
+===================================================== -->
+
+<section
+    class="services"
+    id="servicios"
+>
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -1102,16 +2457,19 @@
                 Servicios
             </div>
 
+
             <h2>
                 Tres grandes líneas para acompañar su negocio
             </h2>
 
+
             <p>
-                Una propuesta sencilla de entender y enfocada en las
-                necesidades reales de cada negocio.
+                Una propuesta sencilla de entender y enfocada
+                en las necesidades reales de cada negocio.
             </p>
 
         </div>
+
 
 
         <div class="service-groups">
@@ -1125,23 +2483,38 @@
                     📒
                 </div>
 
-                <h3>Contabilidad</h3>
+
+                <h3>
+                    Contabilidad
+                </h3>
+
 
                 <ul>
 
-                    <li>Ciclo contable</li>
+                    <li>
+                        Ciclo contable
+                    </li>
 
-                    <li>Estados financieros</li>
+                    <li>
+                        Estados financieros
+                    </li>
 
-                    <li>Conciliaciones</li>
+                    <li>
+                        Conciliaciones
+                    </li>
 
-                    <li>Inventarios</li>
+                    <li>
+                        Inventarios
+                    </li>
 
-                    <li>Libros legales</li>
+                    <li>
+                        Libros legales
+                    </li>
 
                 </ul>
 
             </div>
+
 
 
             <!-- TRIBUTACIÓN -->
@@ -1152,23 +2525,38 @@
                     ⚖️
                 </div>
 
-                <h3>Tributación</h3>
+
+                <h3>
+                    Tributación
+                </h3>
+
 
                 <ul>
 
-                    <li>Declaraciones</li>
+                    <li>
+                        Declaraciones
+                    </li>
 
-                    <li>Régimen Simplificado</li>
+                    <li>
+                        Régimen Simplificado
+                    </li>
 
-                    <li>Deberes formales</li>
+                    <li>
+                        Deberes formales
+                    </li>
 
-                    <li>Fiscalizaciones</li>
+                    <li>
+                        Fiscalizaciones
+                    </li>
 
-                    <li>Inscripción ante Hacienda</li>
+                    <li>
+                        Inscripción ante Hacienda
+                    </li>
 
                 </ul>
 
             </div>
+
 
 
             <!-- FINANZAS -->
@@ -1179,21 +2567,37 @@
                     📊
                 </div>
 
-                <h3>Finanzas</h3>
+
+                <h3>
+                    Finanzas
+                </h3>
+
 
                 <ul>
 
-                    <li>Flujo de caja</li>
+                    <li>
+                        Flujo de caja
+                    </li>
 
-                    <li>Análisis financiero</li>
+                    <li>
+                        Análisis financiero
+                    </li>
 
-                    <li>Costos</li>
+                    <li>
+                        Costos
+                    </li>
 
-                    <li>Presupuestos</li>
+                    <li>
+                        Presupuestos
+                    </li>
 
-                    <li>Indicadores financieros</li>
+                    <li>
+                        Indicadores financieros
+                    </li>
 
-                    <li>Apoyo a la toma de decisiones</li>
+                    <li>
+                        Apoyo a la toma de decisiones
+                    </li>
 
                 </ul>
 
@@ -1207,9 +2611,10 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      EXPERIENCIA
-========================= -->
+===================================================== -->
 
 <section id="experiencia">
 
@@ -1220,71 +2625,92 @@
 
             <div class="experience-image">
 
+
                 <div class="experience-badge">
 
-                    <strong>18 años</strong>
+                    <strong>
+                        18 años
+                    </strong>
 
-                    <span>de experiencia profesional</span>
+                    <span>
+                        de experiencia profesional
+                    </span>
 
                 </div>
+
 
             </div>
 
 
+
             <div class="experience-text">
+
 
                 <div class="section-label">
                     Experiencia
                 </div>
 
+
                 <h2>
                     18 años de experiencia profesional
                 </h2>
 
+
                 <p>
-                    Experiencia en contabilidad general, cuentas por cobrar
-                    y pagar, conciliaciones bancarias, activos fijos,
-                    inventarios, planillas, cierres contables y elaboración
+                    Experiencia en contabilidad general,
+                    cuentas por cobrar y pagar, conciliaciones
+                    bancarias, activos fijos, inventarios,
+                    planillas, cierres contables y elaboración
                     de información financiera.
                 </p>
 
+
                 <p>
-                    El trabajo se complementa con análisis, control y
-                    mejora continua para que la información financiera
-                    sea realmente útil para el negocio.
+                    El trabajo se complementa con análisis,
+                    control y mejora continua para que la
+                    información financiera sea realmente útil
+                    para el negocio.
                 </p>
 
+
                 <ul class="experience-list">
+
 
                     <li>
                         <span>✓</span>
                         Contabilidad general
                     </li>
 
+
                     <li>
                         <span>✓</span>
                         Estados financieros
                     </li>
+
 
                     <li>
                         <span>✓</span>
                         Conciliaciones bancarias
                     </li>
 
+
                     <li>
                         <span>✓</span>
                         Inventarios y activos fijos
                     </li>
+
 
                     <li>
                         <span>✓</span>
                         Planillas y obligaciones laborales
                     </li>
 
+
                     <li>
                         <span>✓</span>
                         Análisis y control financiero
                     </li>
+
 
                 </ul>
 
@@ -1297,41 +2723,56 @@
 </section>
 
 
-<!-- =========================
-     ENFOQUE / VALOR
-========================= -->
 
-<section class="value" id="enfoque">
+<!-- =====================================================
+     ENFOQUE
+===================================================== -->
+
+<section
+    class="value"
+    id="enfoque"
+>
 
     <div class="container">
 
+
         <div class="section-heading">
+
 
             <div class="section-label">
                 Mi enfoque
             </div>
 
+
             <h2>
                 ¿Qué puedo aportar a su negocio?
             </h2>
 
+
             <p>
-                Más que registrar información, el objetivo es ayudarle a
-                entender lo que los números están diciendo.
+                Más que registrar información, el objetivo
+                es ayudarle a entender lo que los números
+                están diciendo.
             </p>
+
 
         </div>
 
 
+
         <div class="value-grid">
 
+
             <div class="value-card">
 
-                <strong>Información clara</strong>
+                <strong>
+                    Información clara
+                </strong>
 
                 <p>
-                    Información contable organizada y comprensible para
-                    conocer la situación real del negocio.
+                    Información contable organizada y
+                    comprensible para conocer la situación
+                    real del negocio.
                 </p>
 
             </div>
@@ -1339,11 +2780,14 @@
 
             <div class="value-card">
 
-                <strong>Orden y control</strong>
+                <strong>
+                    Orden y control
+                </strong>
 
                 <p>
-                    Procesos organizados para facilitar el seguimiento
-                    de ingresos, gastos, activos y obligaciones.
+                    Procesos organizados para facilitar
+                    el seguimiento de ingresos, gastos,
+                    activos y obligaciones.
                 </p>
 
             </div>
@@ -1351,11 +2795,14 @@
 
             <div class="value-card">
 
-                <strong>Cumplimiento</strong>
+                <strong>
+                    Cumplimiento
+                </strong>
 
                 <p>
-                    Apoyo en las obligaciones contables y tributarias
-                    que corresponden a cada negocio.
+                    Apoyo en las obligaciones contables
+                    y tributarias que corresponden a
+                    cada negocio.
                 </p>
 
             </div>
@@ -1363,11 +2810,14 @@
 
             <div class="value-card">
 
-                <strong>Análisis financiero</strong>
+                <strong>
+                    Análisis financiero
+                </strong>
 
                 <p>
-                    Lectura de resultados, rentabilidad, costos,
-                    liquidez y comportamiento financiero.
+                    Lectura de resultados, rentabilidad,
+                    costos, liquidez y comportamiento
+                    financiero.
                 </p>
 
             </div>
@@ -1375,11 +2825,13 @@
 
             <div class="value-card">
 
-                <strong>Atención personalizada</strong>
+                <strong>
+                    Atención personalizada
+                </strong>
 
                 <p>
-                    El servicio se adapta al tamaño, necesidades y
-                    realidad de cada empresa.
+                    El servicio se adapta al tamaño,
+                    necesidades y realidad de cada empresa.
                 </p>
 
             </div>
@@ -1387,14 +2839,17 @@
 
             <div class="value-card">
 
-                <strong>Acompañamiento</strong>
+                <strong>
+                    Acompañamiento
+                </strong>
 
                 <p>
-                    Información financiera orientada a apoyar la toma
-                    de decisiones empresariales.
+                    Información financiera orientada a
+                    apoyar la toma de decisiones empresariales.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1403,31 +2858,39 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      SEGMENTOS
-========================= -->
+===================================================== -->
 
 <section class="segments">
 
     <div class="container">
 
+
         <div class="section-heading">
+
 
             <div class="section-label">
                 ¿A quién puedo ayudar?
             </div>
 
+
             <h2>
                 Soluciones según la etapa de su negocio
             </h2>
 
+
             <p>
-                Servicios pensados para diferentes necesidades empresariales,
-                desde los primeros pasos hasta negocios que necesitan fortalecer
-                su gestión financiera.
+                Servicios pensados para diferentes necesidades
+                empresariales, desde los primeros pasos hasta
+                negocios que necesitan fortalecer su gestión
+                financiera.
             </p>
 
+
         </div>
+
 
 
         <div class="segments-grid">
@@ -1435,53 +2898,69 @@
 
             <div class="segment-card">
 
+
                 <div class="segment-icon">
                     🌱
                 </div>
 
+
                 <div>
 
-                    <h3>Emprendedores</h3>
+                    <h3>
+                        Emprendedores
+                    </h3>
 
                     <p>
-                        Organización contable, inscripción tributaria
-                        y primeras obligaciones.
+                        Organización contable, inscripción
+                        tributaria y primeras obligaciones.
                     </p>
 
                 </div>
 
+
             </div>
 
 
+
             <div class="segment-card">
+
 
                 <div class="segment-icon">
                     🏢
                 </div>
 
+
                 <div>
 
-                    <h3>PYMES</h3>
+                    <h3>
+                        PYMES
+                    </h3>
 
                     <p>
-                        Contabilidad, impuestos, estados financieros
-                        y control financiero.
+                        Contabilidad, impuestos, estados
+                        financieros y control financiero.
                     </p>
 
                 </div>
 
+
             </div>
 
 
+
             <div class="segment-card">
+
 
                 <div class="segment-icon">
                     📊
                 </div>
 
+
                 <div>
 
-                    <h3>Empresas en crecimiento</h3>
+                    <h3>
+                        Empresas en crecimiento
+                    </h3>
 
                     <p>
                         Flujo de caja, análisis financiero,
@@ -1490,25 +2969,32 @@
 
                 </div>
 
+
             </div>
 
 
+
             <div class="segment-card">
+
 
                 <div class="segment-icon">
                     🔎
                 </div>
 
+
                 <div>
 
-                    <h3>Empresas que necesitan ordenar sus finanzas</h3>
+                    <h3>
+                        Empresas que necesitan ordenar sus finanzas
+                    </h3>
 
                     <p>
-                        Diagnóstico financiero, control y acompañamiento
-                        administrativo.
+                        Diagnóstico financiero, control y
+                        acompañamiento administrativo.
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -1520,30 +3006,96 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      COMPROMISO
-========================= -->
+===================================================== -->
 
 <section class="commitment">
 
     <div class="container">
 
+
         <div class="commitment-box">
 
-            <div class="section-label">
-                Mi compromiso
+
+            <div class="commitment-icon">
+                ✓
             </div>
 
-            <h2>
-                Confianza, orden y cumplimiento
-            </h2>
 
-            <p>
-                Brindar información contable confiable y acompañamiento
-                profesional para comprender los números del negocio,
-                identificar oportunidades y utilizar la información
-                financiera como una herramienta para la toma de decisiones.
-            </p>
+            <div class="commitment-content">
+
+
+                <div class="section-label">
+                    Mi compromiso
+                </div>
+
+
+                <h2>
+                    Confianza, orden y cumplimiento
+                </h2>
+
+
+                <p>
+                    Mi compromiso es brindar información contable
+                    confiable, clara y oportuna, acompañando a cada
+                    cliente en la comprensión de sus números y en
+                    el uso de la información financiera para tomar
+                    mejores decisiones.
+                </p>
+
+
+                <div class="commitment-points">
+
+
+                    <div>
+
+                        <strong>
+                            Información clara
+                        </strong>
+
+                        <span>
+                            Para entender realmente la situación
+                            del negocio.
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Acompañamiento profesional
+                        </strong>
+
+                        <span>
+                            Atención personalizada según las
+                            necesidades de cada empresa.
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Visión financiera
+                        </strong>
+
+                        <span>
+                            Más que números: información para
+                            apoyar las decisiones.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
 
         </div>
 
@@ -1552,688 +3104,1267 @@
 </section>
 
 
-<!-- =========================
-     TARIFAS
-========================= -->
 
-<section class="pricing" id="tarifas">
+<!-- =====================================================
+     TARIFAS
+===================================================== -->
+
+<section
+    class="pricing"
+    id="tarifas"
+>
 
     <div class="container">
 
+
         <div class="section-heading">
+
 
             <div class="section-label">
                 Tarifas
             </div>
 
+
             <h2>
                 Servicios y tarifas
             </h2>
 
+
             <p>
-                Seleccione el servicio que desea consultar para visualizar
-                el detalle de horas, subtotal, IVA y total.
+                Seleccione la opción para consultar las tarifas
+                disponibles.
             </p>
 
+
         </div>
 
 
-        <div class="pricing-list">
+
+        <!-- CONTENEDOR GENERAL OCULTO -->
+
+        <details class="pricing-main">
 
 
-            <!-- 1 -->
+            <summary>
 
-            <details class="price-item">
-
-                <summary>
-                    Servicios Contables Profesional — Anual
-                </summary>
-
-                <div class="price-details">
-
-                    <div class="price-grid">
-
-                        <div class="price-data">
-                            <span>Objetivo</span>
-                            <strong>Estados Financieros para Bancos y Clientes</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>6 horas</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡172.566,37</strong>
-                        </div>
-
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡195.000,00</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </details>
+                <span>
+                    Consultar tarifas de servicios
+                </span>
 
 
-            <!-- 2 -->
+                <span class="pricing-main-icon">
+                    +
+                </span>
 
-            <details class="price-item">
-
-                <summary>
-                    Servicios Contables Profesional — Mensual
-                </summary>
-
-                <div class="price-details">
-
-                    <div class="price-grid">
-
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>3 horas</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡86.283,19</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡11.216,81</strong>
-                        </div>
-
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡97.500,00</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </details>
+            </summary>
 
 
-            <!-- 3 -->
 
-            <details class="price-item">
+            <div class="pricing-list">
 
-                <summary>
-                    Flujo de Caja Proyectado
-                </summary>
 
-                <div class="price-details">
+                <!-- 1 -->
 
-                    <div class="price-grid">
+                <details class="price-item">
 
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>3 horas</strong>
-                        </div>
+                    <summary>
+                        Servicios Contables Profesional — Anual
+                    </summary>
 
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡86.283,19</strong>
-                        </div>
 
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡11.216,81</strong>
-                        </div>
+                    <div class="price-details">
 
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡97.500,00</strong>
+                        <div class="price-grid">
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Objetivo
+                                </span>
+
+                                <strong>
+                                    Estados Financieros para Bancos y Clientes
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Horas
+                                </span>
+
+                                <strong>
+                                    6 horas
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡172.566,37
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡195.000,00
+                                </strong>
+
+                            </div>
+
+
                         </div>
 
                     </div>
 
-                </div>
-
-            </details>
+                </details>
 
 
-            <!-- 4 -->
 
-            <details class="price-item">
+                <!-- 2 -->
 
-                <summary>
-                    Asesoría Contable
-                </summary>
+                <details class="price-item">
 
-                <div class="price-details">
-
-                    <div class="price-grid">
-
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>1 hora</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡28.761,06</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡3.738,94</strong>
-                        </div>
-
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡32.500,00</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </details>
+                    <summary>
+                        Servicios Contables Profesional — Mensual
+                    </summary>
 
 
-            <!-- 5 -->
+                    <div class="price-details">
 
-            <details class="price-item">
+                        <div class="price-grid">
 
-                <summary>
-                    Deberes Formales Tributarios
-                </summary>
 
-                <div class="price-details">
+                            <div class="price-data">
 
-                    <div class="price-grid">
+                                <span>
+                                    Horas
+                                </span>
 
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>3 horas</strong>
-                        </div>
+                                <strong>
+                                    3 horas
+                                </strong>
 
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡86.283,19</strong>
-                        </div>
+                            </div>
 
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡11.216,81</strong>
-                        </div>
 
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡97.500,00</strong>
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡86.283,19
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡11.216,81
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡97.500,00
+                                </strong>
+
+                            </div>
+
+
                         </div>
 
                     </div>
 
-                </div>
-
-            </details>
+                </details>
 
 
-            <!-- 6 -->
 
-            <details class="price-item">
+                <!-- 3 -->
 
-                <summary>
-                    Proceso de Fiscalización
-                </summary>
+                <details class="price-item">
 
-                <div class="price-details">
-
-                    <div class="price-grid">
-
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>5 horas</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡143.805,31</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡18.694,69</strong>
-                        </div>
-
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡162.500,00</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </details>
+                    <summary>
+                        Flujo de Caja Proyectado
+                    </summary>
 
 
-            <!-- 7 -->
+                    <div class="price-details">
 
-            <details class="price-item">
+                        <div class="price-grid">
 
-                <summary>
-                    Costeo de Importaciones
-                </summary>
 
-                <div class="price-details">
+                            <div class="price-data">
 
-                    <div class="price-grid">
+                                <span>
+                                    Horas
+                                </span>
 
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>1 hora</strong>
-                        </div>
+                                <strong>
+                                    3 horas
+                                </strong>
 
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡28.761,06</strong>
-                        </div>
+                            </div>
 
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡3.738,94</strong>
-                        </div>
 
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡32.500,00</strong>
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡86.283,19
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡11.216,81
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡97.500,00
+                                </strong>
+
+                            </div>
+
+
                         </div>
 
                     </div>
 
-                </div>
-
-            </details>
+                </details>
 
 
-            <!-- 8 -->
 
-            <details class="price-item">
+                <!-- 4 -->
 
-                <summary>
-                    Levantamientos e Inventarios
-                </summary>
+                <details class="price-item">
 
-                <div class="price-details">
-
-                    <div class="price-grid">
-
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>1 hora</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡28.761,06</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡3.738,94</strong>
-                        </div>
-
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡32.500,00</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </details>
+                    <summary>
+                        Asesoría Contable
+                    </summary>
 
 
-            <!-- 9 -->
+                    <div class="price-details">
 
-            <details class="price-item">
+                        <div class="price-grid">
 
-                <summary>
-                    Cálculo e Implementación de Planillas
-                </summary>
 
-                <div class="price-details">
+                            <div class="price-data">
 
-                    <div class="price-grid">
+                                <span>
+                                    Horas
+                                </span>
 
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>3 horas</strong>
-                        </div>
+                                <strong>
+                                    1 hora
+                                </strong>
 
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡86.283,19</strong>
-                        </div>
+                            </div>
 
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡11.216,81</strong>
-                        </div>
 
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡97.500,00</strong>
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡28.761,06
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡3.738,94
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡32.500,00
+                                </strong>
+
+                            </div>
+
+
                         </div>
 
                     </div>
 
-                </div>
-
-            </details>
+                </details>
 
 
-            <!-- 10 -->
 
-            <details class="price-item">
+                <!-- 5 -->
 
-                <summary>
-                    Cálculo de Aguinaldo o Liquidaciones Laborales
-                </summary>
+                <details class="price-item">
 
-                <div class="price-details">
-
-                    <div class="price-grid">
-
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>1 hora</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡28.761,06</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡3.738,94</strong>
-                        </div>
-
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡32.500,00</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </details>
+                    <summary>
+                        Deberes Formales Tributarios
+                    </summary>
 
 
-            <!-- 11 -->
+                    <div class="price-details">
 
-            <details class="price-item">
+                        <div class="price-grid">
 
-                <summary>
-                    Conciliación de Cuentas Bancarias
-                </summary>
 
-                <div class="price-details">
+                            <div class="price-data">
 
-                    <div class="price-grid">
+                                <span>
+                                    Horas
+                                </span>
 
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>3 horas</strong>
-                        </div>
+                                <strong>
+                                    3 horas
+                                </strong>
 
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡86.283,19</strong>
-                        </div>
+                            </div>
 
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡11.216,81</strong>
-                        </div>
 
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡97.500,00</strong>
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡86.283,19
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡11.216,81
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡97.500,00
+                                </strong>
+
+                            </div>
+
+
                         </div>
 
                     </div>
 
-                </div>
-
-            </details>
+                </details>
 
 
-            <!-- 12 -->
 
-            <details class="price-item">
+                <!-- 6 -->
 
-                <summary>
-                    Catálogo de Cuentas
-                </summary>
+                <details class="price-item">
 
-                <div class="price-details">
-
-                    <div class="price-grid">
-
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>2 horas</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡57.522,12</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡7.477,88</strong>
-                        </div>
-
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡65.000,00</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </details>
+                    <summary>
+                        Proceso de Fiscalización
+                    </summary>
 
 
-            <!-- 13 -->
+                    <div class="price-details">
 
-            <details class="price-item">
+                        <div class="price-grid">
 
-                <summary>
-                    Actualización de Libros Legales
-                </summary>
 
-                <div class="price-details">
+                            <div class="price-data">
 
-                    <div class="price-grid">
+                                <span>
+                                    Horas
+                                </span>
 
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>2 horas</strong>
-                        </div>
+                                <strong>
+                                    5 horas
+                                </strong>
 
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡57.522,12</strong>
-                        </div>
+                            </div>
 
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡7.477,88</strong>
-                        </div>
 
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡65.000,00</strong>
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡143.805,31
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡18.694,69
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡162.500,00
+                                </strong>
+
+                            </div>
+
+
                         </div>
 
                     </div>
 
-                </div>
-
-            </details>
+                </details>
 
 
-            <!-- 14 -->
 
-            <details class="price-item">
+                <!-- 7 -->
 
-                <summary>
-                    Inscripción de Contribuyentes
-                </summary>
+                <details class="price-item">
 
-                <div class="price-details">
-
-                    <div class="price-grid">
-
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>1 hora</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡28.761,06</strong>
-                        </div>
-
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡3.738,94</strong>
-                        </div>
-
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡32.500,00</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </details>
+                    <summary>
+                        Costeo de Importaciones
+                    </summary>
 
 
-            <!-- 15 -->
+                    <div class="price-details">
 
-            <details class="price-item">
+                        <div class="price-grid">
 
-                <summary>
-                    Servicios Contables del Régimen Simplificado
-                </summary>
 
-                <div class="price-details">
+                            <div class="price-data">
 
-                    <div class="price-grid">
+                                <span>
+                                    Horas
+                                </span>
 
-                        <div class="price-data">
-                            <span>Horas</span>
-                            <strong>2 horas</strong>
-                        </div>
+                                <strong>
+                                    1 hora
+                                </strong>
 
-                        <div class="price-data">
-                            <span>Subtotal</span>
-                            <strong>₡57.522,12</strong>
-                        </div>
+                            </div>
 
-                        <div class="price-data">
-                            <span>IVA</span>
-                            <strong>₡7.477,88</strong>
-                        </div>
 
-                        <div class="price-data price-total">
-                            <span>Total</span>
-                            <strong>₡65.000,00</strong>
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡28.761,06
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡3.738,94
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡32.500,00
+                                </strong>
+
+                            </div>
+
+
                         </div>
 
                     </div>
 
-                </div>
-
-            </details>
+                </details>
 
 
-            <!-- 16 -->
 
-            <details class="price-item">
+                <!-- 8 -->
 
-                <summary>
-                    Constancias
-                </summary>
+                <details class="price-item">
 
-                <div class="price-details">
-
-                    <p style="color:#6b7280;">
-                        Documentos con resultado neto inferior a
-                        ₡100.000. Para resultados superiores a ₡100.000
-                        se aplica un 5% adicional según la tarifa indicada.
-                        Incluye timbre de ₡10 según la información suministrada.
-                    </p>
-
-                </div>
-
-            </details>
+                    <summary>
+                        Levantamientos e Inventarios
+                    </summary>
 
 
-        </div>
+                    <div class="price-details">
+
+                        <div class="price-grid">
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Horas
+                                </span>
+
+                                <strong>
+                                    1 hora
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡28.761,06
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡3.738,94
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡32.500,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </details>
+
+
+
+                <!-- 9 -->
+
+                <details class="price-item">
+
+                    <summary>
+                        Cálculo e Implementación de Planillas
+                    </summary>
+
+
+                    <div class="price-details">
+
+                        <div class="price-grid">
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Horas
+                                </span>
+
+                                <strong>
+                                    3 horas
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡86.283,19
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡11.216,81
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡97.500,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </details>
+
+
+
+                <!-- 10 -->
+
+                <details class="price-item">
+
+                    <summary>
+                        Cálculo de Aguinaldo o Liquidaciones Laborales
+                    </summary>
+
+
+                    <div class="price-details">
+
+                        <div class="price-grid">
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Horas
+                                </span>
+
+                                <strong>
+                                    1 hora
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡28.761,06
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡3.738,94
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡32.500,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </details>
+
+
+
+                <!-- 11 -->
+
+                <details class="price-item">
+
+                    <summary>
+                        Conciliación de Cuentas Bancarias
+                    </summary>
+
+
+                    <div class="price-details">
+
+                        <div class="price-grid">
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Horas
+                                </span>
+
+                                <strong>
+                                    3 horas
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡86.283,19
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡11.216,81
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡97.500,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </details>
+
+
+
+                <!-- 12 -->
+
+                <details class="price-item">
+
+                    <summary>
+                        Catálogo de Cuentas
+                    </summary>
+
+
+                    <div class="price-details">
+
+                        <div class="price-grid">
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Horas
+                                </span>
+
+                                <strong>
+                                    2 horas
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡57.522,12
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡7.477,88
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡65.000,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </details>
+
+
+
+                <!-- 13 -->
+
+                <details class="price-item">
+
+                    <summary>
+                        Actualización de Libros Legales
+                    </summary>
+
+
+                    <div class="price-details">
+
+                        <div class="price-grid">
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Horas
+                                </span>
+
+                                <strong>
+                                    2 horas
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡57.522,12
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡7.477,88
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡65.000,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </details>
+
+
+
+                <!-- 14 -->
+
+                <details class="price-item">
+
+                    <summary>
+                        Inscripción de Contribuyentes
+                    </summary>
+
+
+                    <div class="price-details">
+
+                        <div class="price-grid">
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Horas
+                                </span>
+
+                                <strong>
+                                    1 hora
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡28.761,06
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡3.738,94
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡32.500,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </details>
+
+
+
+                <!-- 15 -->
+
+                <details class="price-item">
+
+                    <summary>
+                        Servicios Contables del Régimen Simplificado
+                    </summary>
+
+
+                    <div class="price-details">
+
+                        <div class="price-grid">
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Horas
+                                </span>
+
+                                <strong>
+                                    2 horas
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong>
+                                    ₡57.522,12
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data">
+
+                                <span>
+                                    IVA
+                                </span>
+
+                                <strong>
+                                    ₡7.477,88
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-data price-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong>
+                                    ₡65.000,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </details>
+
+
+
+                <!-- 16 -->
+
+                <details class="price-item">
+
+                    <summary>
+                        Constancias
+                    </summary>
+
+
+                    <div class="price-details">
+
+                        <p style="color:#6b7280;">
+
+                            Documentos con resultado neto inferior a
+                            ₡100.000. Para resultados superiores a
+                            ₡100.000 se aplica un 5% adicional según
+                            la tarifa indicada. Incluye timbre de
+                            ₡10 según la información suministrada.
+
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+            </div>
+
+        </details>
 
 
         <p class="pricing-note">
-            * Las tarifas mostradas corresponden a los servicios y condiciones
-            indicados. Los servicios pueden variar según la complejidad y
-            características particulares de cada requerimiento.
+
+            * Las tarifas mostradas corresponden a los servicios
+            y condiciones indicados. Los servicios pueden variar
+            según la complejidad y características particulares
+            de cada requerimiento.
+
         </p>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     CONTACTO
-========================= -->
 
-<section class="contact" id="contacto">
+<!-- =====================================================
+     CONTACTO
+===================================================== -->
+
+<section
+    class="contact"
+    id="contacto"
+>
 
     <div class="container">
+
 
         <div class="contact-grid">
 
 
             <div>
 
+
                 <div class="section-label">
                     Contacto
                 </div>
+
 
                 <h2>
                     Conversemos sobre las necesidades de su negocio.
                 </h2>
 
+
                 <p class="contact-intro">
-                    Complete el formulario y se abrirá WhatsApp con la
-                    información de su solicitud para darle seguimiento.
+
+                    Complete el formulario y se abrirá WhatsApp
+                    con la información de su solicitud para darle
+                    seguimiento.
+
                 </p>
 
 
                 <div class="contact-info">
 
+
                     <div>
 
-                        <strong>Profesional</strong>
+                        <strong>
+                            Profesional
+                        </strong>
 
                         Jason Masis
                         <br>
@@ -2244,7 +4375,9 @@
 
                     <div>
 
-                        <strong>Experiencia</strong>
+                        <strong>
+                            Experiencia
+                        </strong>
 
                         18 años de experiencia profesional
 
@@ -2253,18 +4386,27 @@
 
                     <div>
 
-                        <strong>Atención</strong>
+                        <strong>
+                            Atención
+                        </strong>
 
                         Contabilidad · Tributación · Finanzas
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
 
-            <form class="contact-form" id="contactForm">
+
+            <form
+                class="contact-form"
+                id="contactForm"
+            >
+
 
                 <div class="form-grid">
 
@@ -2275,6 +4417,7 @@
                             Nombre
                         </label>
 
+
                         <input
                             type="text"
                             id="nombre"
@@ -2284,11 +4427,13 @@
                     </div>
 
 
+
                     <div class="form-group">
 
                         <label for="correo">
                             Correo
                         </label>
+
 
                         <input
                             type="email"
@@ -2299,11 +4444,13 @@
                     </div>
 
 
+
                     <div class="form-group">
 
                         <label for="telefono">
                             Teléfono
                         </label>
+
 
                         <input
                             type="tel"
@@ -2313,61 +4460,78 @@
                     </div>
 
 
+
                     <div class="form-group">
 
                         <label for="requerimiento">
                             Requerimiento
                         </label>
 
-                        <select id="requerimiento" required>
+
+                        <select
+                            id="requerimiento"
+                            required
+                        >
 
                             <option value="">
                                 Seleccione una opción
                             </option>
 
+
                             <option>
                                 Servicios Contables Profesional
                             </option>
+
 
                             <option>
                                 Flujo de Caja Proyectado
                             </option>
 
+
                             <option>
                                 Asesoría Contable
                             </option>
+
 
                             <option>
                                 Deberes Formales Tributarios
                             </option>
 
+
                             <option>
                                 Proceso de Fiscalización
                             </option>
+
 
                             <option>
                                 Costeo de Importaciones
                             </option>
 
+
                             <option>
                                 Levantamientos e Inventarios
                             </option>
+
 
                             <option>
                                 Cálculo e Implementación de Planillas
                             </option>
 
+
                             <option>
                                 Conciliación de Cuentas Bancarias
                             </option>
+
 
                             <option>
                                 Otro
                             </option>
 
+
                         </select>
 
                     </div>
+
 
 
                     <div class="form-group full">
@@ -2376,6 +4540,7 @@
                             Cuéntenos brevemente qué necesita
                         </label>
 
+
                         <textarea
                             id="mensaje"
                             placeholder="Describa su consulta o necesidad..."
@@ -2383,6 +4548,7 @@
                         ></textarea>
 
                     </div>
+
 
 
                     <div class="form-group full">
@@ -2396,9 +4562,11 @@
 
                     </div>
 
+
                 </div>
 
             </form>
+
 
         </div>
 
@@ -2407,46 +4575,95 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
     <div class="container">
 
-        © <span id="year"></span> Jason Masis · Contador Privado Incorporado
+
+        <div class="footer-brand">
+            Soluciones Financieras MM
+        </div>
+
+
+        <div class="footer-rights">
+
+            © <span id="year"></span>
+            Todos los derechos reservados.
+
+        </div>
+
+
+        <div class="footer-creator">
+
+            Created by Joseph Morales Coto
+
+        </div>
+
 
     </div>
 
 </footer>
 
 
-<!-- =========================
+
+<!-- =====================================================
      WHATSAPP
-========================= -->
+===================================================== -->
 
 <a
-    href="https://wa.me/50684993030"
+    href="https://wa.me/50684993030?text=Hola%20Jason%2C%20me%20gustaría%20recibir%20información%20sobre%20sus%20servicios%20contables%2C%20tributarios%20y%20financieros."
     class="whatsapp"
     target="_blank"
     rel="noopener"
     aria-label="Contactar por WhatsApp"
+    title="Escríbeme por WhatsApp"
 >
-    ☎
+
+
+    <svg
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+    >
+
+        <path
+            fill="currentColor"
+            d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01s-.48.07-.73.34c-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.92 2.93 4.65 4.11.65.28 1.15.45 1.54.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
+        />
+
+
+        <path
+            fill="currentColor"
+            d="M16.02 3C8.84 3 3 8.82 3 16c0 2.29.6 4.52 1.74 6.48L3 29l6.68-1.72A12.94 12.94 0 0 0 16.02 29C23.18 29 29 23.18 29 16S23.18 3 16.02 3zm0 23.82c-2.04 0-4.04-.55-5.79-1.59l-.41-.24-3.96 1.02 1.06-3.86-.27-.4A10.82 10.82 0 1 1 16.02 26.82z"
+        />
+
+    </svg>
+
 </a>
 
 
-<!-- =========================
+
+<!-- =====================================================
      JAVASCRIPT
-========================= -->
+===================================================== -->
 
 <script>
 
-    /* Menú móvil */
 
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+    /* =====================================================
+       MENÚ MÓVIL
+    ===================================================== */
+
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const navLinks =
+        document.getElementById("navLinks");
+
 
     menuBtn.addEventListener("click", function() {
 
@@ -2455,48 +4672,96 @@
     });
 
 
-    /* Cerrar menú al seleccionar */
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function(link) {
 
-    document.querySelectorAll(".nav-links a").forEach(function(link) {
+            link.addEventListener("click", function() {
 
-        link.addEventListener("click", function() {
+                navLinks.classList.remove("active");
 
-            navLinks.classList.remove("active");
+            });
+
+        });
+
+
+
+    /* =====================================================
+       AÑO AUTOMÁTICO
+    ===================================================== */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+
+    /* =====================================================
+       TARIFAS
+       SOLO UNA TARIFA ABIERTA A LA VEZ
+    ===================================================== */
+
+    const priceItems =
+        document.querySelectorAll(".price-item");
+
+
+    priceItems.forEach(function(item) {
+
+        item.addEventListener("toggle", function() {
+
+            if (item.open) {
+
+                priceItems.forEach(function(other) {
+
+                    if (other !== item) {
+
+                        other.removeAttribute("open");
+
+                    }
+
+                });
+
+            }
 
         });
 
     });
 
 
-    /* Año automático */
 
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
+    /* =====================================================
+       FORMULARIO → WHATSAPP
+    ===================================================== */
 
+    document
+        .getElementById("contactForm")
+        .addEventListener("submit", function(e) {
 
-    /* Formulario → WhatsApp */
-
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-
-        e.preventDefault();
-
-        const nombre =
-            document.getElementById("nombre").value;
-
-        const correo =
-            document.getElementById("correo").value;
-
-        const telefono =
-            document.getElementById("telefono").value;
-
-        const requerimiento =
-            document.getElementById("requerimiento").value;
-
-        const mensaje =
-            document.getElementById("mensaje").value;
+            e.preventDefault();
 
 
-        const texto =
+            const nombre =
+                document.getElementById("nombre").value;
+
+
+            const correo =
+                document.getElementById("correo").value;
+
+
+            const telefono =
+                document.getElementById("telefono").value;
+
+
+            const requerimiento =
+                document.getElementById("requerimiento").value;
+
+
+            const mensaje =
+                document.getElementById("mensaje").value;
+
+
+
+            const texto =
+
 `Hola Jason, me gustaría solicitar información sobre sus servicios.
 
 Nombre: ${nombre}
@@ -2511,42 +4776,27 @@ Detalle:
 ${mensaje}`;
 
 
-        const whatsappURL =
-            "https://wa.me/50684993030?text=" +
-            encodeURIComponent(texto);
+
+            const whatsappURL =
+
+                "https://wa.me/50684993030?text=" +
+
+                encodeURIComponent(texto);
 
 
-        window.open(whatsappURL, "_blank");
 
-    });
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
 
-
-    /* Cerrar otros precios al abrir uno */
-
-    const priceItems =
-        document.querySelectorAll(".price-item");
-
-    priceItems.forEach(function(item) {
-
-        item.addEventListener("toggle", function() {
-
-            if (item.open) {
-
-                priceItems.forEach(function(other) {
-
-                    if (other !== item) {
-                        other.removeAttribute("open");
-                    }
-
-                });
-
-            }
 
         });
 
-    });
 
 </script>
 
+
 </body>
+
 </html>
